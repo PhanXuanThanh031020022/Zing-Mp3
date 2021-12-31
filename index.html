@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Music player</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./acset/img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./acset/css/style.css">
+    <link rel="stylesheet" href="./acset/css/basic.css">
+    <link rel="stylesheet" href="./acset/css/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap">
+    <title>Zing Mp3</title>
 </head>
 <body>
-    <div class="player">
-        <!-- Dashboard -->
-        <div class="dashboard">
-          <!-- Header -->
-          <header>
-            <h4>Now playing:</h4>
-            <marquee> This is a marquee </marquee>
-          </header>
-          
-          <!-- CD -->
-          <div class="cd">
-            <div class="cd-thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+    <div id="header"></div>
+    <div id="body"></div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <!-- Bài hát đang phát -->
+        <div class="footer__ song">
+            <div class="image-current">
+                <img src="./acset/img/maimaikhonglaanh.webp" alt="">
             </div>
-          </div>
-      
-          <!-- Control -->
-          <div class="control">
-            <div class="btn btn-repeat">
-              <i class="fas fa-redo"></i>
+            <div class="footer__song- songname">
+                <p class="footer__song-name">Mãi mãi không là anh</p>
+                <p class="footer__song-singer">Thanh bình</p>
             </div>
-            <div class="btn btn-prev">
-              <i class="fas fa-step-backward"></i>
+            <div class="footer__song- like">
+                <i class="bi bi-heart-fill"></i>
+                <i class="bi bi-three-dots"></i>
             </div>
-            <div class="btn btn-toggle-play">
-              <i class="fas fa-pause icon-pause"></i>
-              <i class="fas fa-play icon-play"></i>
-            </div>
-            <div class="btn btn-next">
-              <i class="fas fa-step-forward"></i>
-            </div>
-            <div class="btn btn-random">
-              <i class="fas fa-random"></i>
-            </div>
-          </div>
-      
-          <input id="progress" class="progress" type="range" value="0" min="0" max="100">
-          <audio id="audio" src=""></audio>
-          <span class="span-left">2:20</span>
-          <span class="span-right">2:20</span>
         </div>
-      
-        <!-- Playlist -->
-        <div class="scroll">
-          <div class="playlist">
-          </div>
+        <!-- Bảng điều khiển-->
+        <div class="footer__control">
+            <div class="footer__">
+                <div class="btn btn-random">
+                    <i class="bi bi-shuffle"></i>
+                </div> 
+                <div class="btn btn-prev">
+                    <i class="bi bi-skip-start-fill"></i>
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="bi bi-pause-circle"></i>
+                    <i class="bi bi-play-circle"></i>
+                </div>
+                <div class="btn btn-btn-next">
+                    <i class="bi bi-skip-end-fill"></i>
+                </div>
+                <div class="btn btn-repeat">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+            </div>
+            <div class="control-input-group">
+                <span class="time-start">00:00</span>
+                <input type="range" value="0" min="0" max="100" id="input">
+                <span class="time-end">04:33</span>
+            </div>
         </div>
-        
+        <div class="footer__ lyrics">
+            <div class="btn btn-mv">
+                <i class="bi bi-youtube"></i>
+            </div>
+            <div class="btn btn-lyrics">
+                <i class="bi bi-mic-fill"></i>
+            </div>
+            <div class="btn volume">
+                <i class="bi bi-volume-up"></i>
+                <i class="bi bi-volume-mute"></i>
+            </div>
+            <div class="btn">
+                <i class="bi bi-music-note-list"></i>
+            </div>
+        </div>
     </div>
-      <script src="./index.js"></script>
+       
+    </div>
 </body>
 </html>
